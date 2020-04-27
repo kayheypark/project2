@@ -1,9 +1,14 @@
 /*reset*/
 @import url("reset.css");
 
+/*common*/
+a {text-decoration: none; color: #fff;}
+
 
 /* 레이아웃 */
-header {border: 1px solid blue;}
+header {}
+.header_wrap {background: #222222;}
+.header_inner {width: 1601px; margin: 0 auto;}
 section {border: 1px solid red;}
 #container {border: 1px solid red;}
 footer {border: 1px solid blue;}
@@ -19,6 +24,19 @@ article>div.detail{position: absolute; left: 0; top: 100%;
                     transition: top 400ms cubic-bezier(0.770, 0.000, 0.175, 1.000);}
 article:hover>div.detail{top: 0;}
 
+
+/*헤더*/
+header>.header_wrap {border: 1px solid red;}
+header>.header_inner {border: 1px solid red;}
+/*탑메뉴*/
+dl.topMenu {float: right; border: 1px solid red;}
+dl.topMenu dd {float: left; color: blue;}
+dl.topMenu dd ul {display: none;}
+
+/*주메뉴*/
+nav.gnb {border: 1px solid red;}
+nav.gnb ul {}
+nav.gnb ul li {float: left;}
 
 
 
