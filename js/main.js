@@ -105,5 +105,26 @@ $(document).ready(function () {
 
     });
 
+    //.quick4 img0~19 이미지생성
+    var quick4="";
+    for(var i=0;i<20;i++){
+        if (i<10){
+            quick4 += "<img src='images/quick04/quick04_0000"+i+".png' alt='카드등록안내"+i+"'>"
+        } else {
+            quick4 += "<img src='images/quick04/quick04_000"+i+".png' alt='카드등록안내"+i+"'>"
+        }
+    }
+    $("span.quick4").html(quick4);
+    //마우스 올렸을 때
+    $("a.q").hover(function(){
+        //애니실행
+        for(var k=0;k<20;k++){
+            $(".quick4>img").eq(k).css({"animation":"ani 4.1s linear " + 0.05*k + "s 1 normal"});
+        }
+    },function(){
+        $(".quick4>img").css("animation","none");
+
+    });
+
 
 });

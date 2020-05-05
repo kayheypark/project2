@@ -9,6 +9,12 @@
 
 a {text-decoration: none; color: #000;}
 body {font-family: "nanum"; font-size: 16px;}
+span.line {
+position: absolute;
+top: 20px;
+width: 1px;
+    height: 151px;
+    background-color: #ddd;}
 
 
 /* 레이아웃 */
@@ -19,7 +25,7 @@ header:after {content: ""; display: block; clear: both;}
 section {}
 
 #container {width: 100%;  box-sizing: border-box;}
-.content1 {width: 1019px; height: 232px; margin: 0 auto;}
+.content1 {width: 1060px; height: 232px; margin: 0 auto; box-sizing: border-box; padding-top: 10px;}
 .content2 {}
 footer {border: 1px solid blue;}
 article {position: relative; width: 450px; height: 650px; background: grey;}
@@ -86,20 +92,24 @@ a.loop {position: absolute; left: 0; top: 0;}
 }
 
 /*퀵메뉴*/
+.q dl {text-align: center; position: relative; top: 130px;}
+.q dl dt {color: #222;}
+.q dl dd {font-size: 14px; color: #555;}
+
 .quick1{position: relative; width: 140px; height: 121px;}
-.quick1 img{position: absolute; top: 0; left: 0; opacity: 0;}
+.quick1 img{position: absolute; top: 0; left: 52px; opacity: 0;}
 .quick1 img:first-of-type {opacity: 1;}
 
 .quick2{position: relative; width: 140px; height: 121px;}
-.quick2 img{position: absolute; top: 0; left: 0; opacity: 0;}
+.quick2 img{position: absolute; top: 0; left: 80px; opacity: 0;}
 .quick2 img:first-of-type {opacity: 1;}
 
 .quick3{position: relative; width: 140px; height: 121px;}
-.quick3 img{position: absolute; top: 0; left: 0; opacity: 0;}
+.quick3 img{position: absolute; top: 0; left: 52px; opacity: 0;}
 .quick3 img:first-of-type {opacity: 1;}
 
 .quick4{position: relative; width: 140px; height: 121px;}
-.quick4 img{position: absolute; top: 0; left: 0; opacity: 0;}
+.quick4 img{position: absolute; top: 0; left: 52px; opacity: 0;}
 .quick4 img:first-of-type {opacity: 1;}
 
 
@@ -137,10 +147,15 @@ section .arrow a {position: absolute; top: 350px; width: 48px; height: 60px;
 a.prev {background: url(../images/btn_banner_black.png) no-repeat 0 0; left: 0;}
 a.next {background: url(../images/btn_banner_black.png) no-repeat -48px 0; right: 0;}
 
+/*컨테이너*/
 /*컨텐트1*/
 /*퀵*/
-.content1 li {display: block; float: left;
- }
+.content1 ul {width: 100%;}
+.content1 ul li {position: relative;}
+.content1 li a{display: block; float: left; width: 269px; margin-right: 0px;}
+.content1 li:first-child a {width: 260px;}
+.content1 li:last-child a {margin-right:0; width: 259px;}
+
 .content1 a.q { 
               }
 
