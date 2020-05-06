@@ -126,5 +126,14 @@ $(document).ready(function () {
 
     });
 
-
+//컨텐트2 아티클 애니메이션
+$(".content2 article").mouseover(function(){
+    $(this).addClass("on");
 });
+$(".content2 article").mouseout(function(){
+    $(this).removeClass("on");
+});
+
+
+
+});// 독레디닫기

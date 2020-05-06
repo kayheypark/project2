@@ -26,9 +26,10 @@ section {}
 
 #container {width: 100%;  box-sizing: border-box;}
 .content1 {width: 1060px; height: 232px; margin: 0 auto; box-sizing: border-box; padding-top: 10px;}
-.content2 {}
+.content2 {background: url(../images/bg_hotcontent.png) no-repeat 0 0; background-size: cover;}
+.content2 .content2_inner {width: 1052px; margin: 0 auto; border: 1px solid red;}
 footer {border: 1px solid blue;}
-article {position: relative; width: 450px; height: 650px; background: grey;}
+article {position: relative; width: 450px; height: 650px; background: #fff;}
 article>a>p{width: 450px;height: 450px;}
 article>a>div.info{width: 450px;height: 200px;background: red;}
 article>div.detail{position: absolute; left: 0; top: 100%;
@@ -156,11 +157,28 @@ a.next {background: url(../images/btn_banner_black.png) no-repeat -48px 0; right
 .content1 li:first-child a {width: 260px;}
 .content1 li:last-child a {margin-right:0; width: 259px;}
 
-.content1 a.q { 
-              }
 
-.content1 ul {}
+/*컨텐트2*/
+.content2_inner {}
+.content2_inner article {position: relative;  overflow: hidden;}
+.content2_inner article h3 > img {width: 70px;}
+.content2_inner h2 {font-size: 34px; color: #222; text-align: center;
+                    padding: 35px 0;}
+
+.content2_inner article:nth-of-type(1) {display: block; width: 501px;}
+.content2_inner article:nth-of-type(1) a > .hot_img img {width: 501px; height: 500px;}
+.content2_inner article:nth-of-type(1) a > div {height: 400px; background: #fff;
+                                                padding-top: 60px; text-align: center;
+                                                }
+.content2_inner article:nth-of-type(1) .detail {width: 100%; height: 900px; 
+                                                position: absolute; top: 900px;
+                                                text-align: center;
+                                                padding-top: 200px;
+                                    background: #fff; transition: all 0.2s ease 0s;}
+.content2_inner article:nth-of-type(1) p.title {padding-bottom: 15px;}
+.content2_inner article:nth-of-type(1).on .detail {top: 0px;}
+
+
 
 /*dn*/
-.content2, footer {display: none;}
-.content3 {display: none;}
+.content3, footer {display: none;}
