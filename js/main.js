@@ -42,6 +42,8 @@ $(document).ready(function () {
         $(".loop>img").eq(k).css({"animation":"ani 4.1s linear " + 0.05*k + "s infinite normal"});
     }
 
+
+
     //.quick1 img0~19 이미지생성
     var quick1="";
     for(var i=0;i<20;i++){
@@ -53,7 +55,7 @@ $(document).ready(function () {
     }
     $("span.quick1").html(quick1);
     //마우스 올렸을 때
-    $("a.q").hover(function(){
+    $("a.q1").hover(function(){
         //애니실행
         for(var k=0;k<20;k++){
             $(".quick1>img").eq(k).css({"animation":"ani 4.1s linear " + 0.05*k + "s 1 normal"});
@@ -62,6 +64,8 @@ $(document).ready(function () {
         $(".quick1>img").css("animation","none");
 
     });
+
+
 
     //.quick2 img0~19 이미지생성
     var quick2="";
@@ -74,7 +78,7 @@ $(document).ready(function () {
     }
     $("span.quick2").html(quick2);
     //마우스 올렸을 때
-    $("a.q").hover(function(){
+    $("a.q2").hover(function(){
         //애니실행
         for(var k=0;k<20;k++){
             $(".quick2>img").eq(k).css({"animation":"ani 4.1s linear " + 0.05*k + "s 1 normal"});
@@ -83,6 +87,8 @@ $(document).ready(function () {
         $(".quick2>img").css("animation","none");
 
     });
+
+
 
     //.quick3 img0~19 이미지생성
     var quick3="";
@@ -95,7 +101,7 @@ $(document).ready(function () {
     }
     $("span.quick3").html(quick3);
     //마우스 올렸을 때
-    $("a.q").hover(function(){
+    $("a.q3").hover(function(){
         //애니실행
         for(var k=0;k<20;k++){
             $(".quick3>img").eq(k).css({"animation":"ani 4.1s linear " + 0.05*k + "s 1 normal"});
@@ -104,6 +110,8 @@ $(document).ready(function () {
         $(".quick3>img").css("animation","none");
 
     });
+
+
 
     //.quick4 img0~19 이미지생성
     var quick4="";
@@ -116,7 +124,7 @@ $(document).ready(function () {
     }
     $("span.quick4").html(quick4);
     //마우스 올렸을 때
-    $("a.q").hover(function(){
+    $("a.q4").hover(function(){
         //애니실행
         for(var k=0;k<20;k++){
             $(".quick4>img").eq(k).css({"animation":"ani 4.1s linear " + 0.05*k + "s 1 normal"});
@@ -125,6 +133,8 @@ $(document).ready(function () {
         $(".quick4>img").css("animation","none");
 
     });
+
+
 
 //컨텐트2 아티클 애니메이션
 $(".content2 article").mouseover(function(){
