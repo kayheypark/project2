@@ -1,4 +1,120 @@
 $(document).ready(function () {
+
+/*주메뉴*/
+ $(".gnb>ul>li").bind("mouseover focus",function(){
+    $(".header_wrap").addClass("on");
+ });
+
+ $(".gnb>ul>li").bind("mouseleave blur",function(){
+    $(".header_wrap").removeClass("on");
+ });
+
+
+/*프로모션 배너*/
+var $bnnNum=0;
+var $lastNum=$(".banner_frame>section").size()-1;
+var $banner_w=$("body>section").width();
+
+//리사이즈
+$(window).resize(function(){
+    $banner_w=$("body>section").width();
+});
+
+//다음
+$(".next").click(function(){
+    $bnnNum++;
+    if($bnnNum>$lastNum) $bnnNum=0;
+    $(".banner_frame").animate({"left":-$bnnNum*$banner_w},600,"linear",function(){
+        if($(".banner_frame>section").eq($bnnNum).hasClass("white")){
+            $(this).siblings().find("a").addClass("wbtn");
+        }else{
+            $(this).siblings().find("a").removeClass("wbtn");
+        }
+        $(".banner_roll a").removeClass("on");
+        $(".banner_roll a").eq($bnnNum).addClass("on");
+    });
+});
+
+//이전
+$(".prev").click(function(){
+    $bnnNum--;
+    if($bnnNum<0) $bnnNum=$lastNum;
+    $(".banner_frame").animate({"left":-$bnnNum*$banner_w},600,"linear",function(){
+        if($(".banner_frame>section").eq($bnnNum).hasClass("white")){
+            $(this).siblings().find("a").addClass("wbtn");
+        }else{
+            $(this).siblings().find("a").removeClass("wbtn");
+        }
+        $(".banner_roll a").removeClass("on");
+        $(".banner_roll a").eq($bnnNum).addClass("on");
+    });
+});
+
+var $banner=$(".banner_roll a").click(function(){
+    $bnnNum=$banner.index(this);
+    $(".banner_frame").animate({"left":-$bnnNum*$banner_w},600,"linear",function(){
+        if($(".banner_frame>section").eq($bnnNum).hasClass("white")){
+            $(this).siblings().find("a").addClass("wbtn");
+        }else{
+            $(this).siblings().find("a").removeClass("wbtn");
+        }
+        $(".banner_roll a").removeClass("on");
+        $(".banner_roll a").eq($bnnNum).addClass("on");
+    });
+});
+
+/*오토배너*/
+function autoBanner(){
+    //다음 쿼리 그대로 가져옴
+    $bnnNum++;
+    if($bnnNum>$lastNum) $bnnNum=0;
+    $(".banner_frame").animate({"left":-$bnnNum*$banner_w},600,"linear",function(){
+        if($(".banner_frame>section").eq($bnnNum).hasClass("white")){
+            $(this).siblings().find("a").addClass("wbtn");
+        }else{
+            $(this).siblings().find("a").removeClass("wbtn");
+        }
+        $(".banner_roll a").removeClass("on");
+        $(".banner_roll a").eq($bnnNum).addClass("on");
+    });
+}
+
+//일정한 시간동안 계속반복
+var $autoBnn=setInterval(autoBanner,5000);
+
+/*재생멈춤*/
+var flag=true;
+$("a.play").click(function(){
+    if(flag){
+        clearInterval($autoBnn);
+        $(this).toggleClass("play pause");
+        flag=false;
+    }else{
+        //꼭 기존의 변수에다가 setInterval을 넣어야함
+        $autoBnn=setInterval(autoBanner,1500);
+        $(this).toggleClass("play pause");
+        flag=true;
+    }
+});
+
+//모바일 기기의 방향을 전환(가로/세로)할 때 화면의 너비가 달라지는 것에 대비해서 항상 바른 위치에 있도록 애니메이션 적용
+$("body>section").bind("orientationchange",function(){
+    $banner_w=$("body>section").width();
+    $(".banner_frame").animate({"left":-$bnnNum*$banner_w},600,"linear");
+});
+
+//모바일에서
+$("body>section").bind("swipeleft",function(){
+    $(".next").trigger("click");
+});
+$("body>section").bind("swiperight",function(){
+    $(".prev").trigger("click");
+});
+
+
+
+
+
     //appear 이미지 생성
     //<img src="images/appear/appear_00000.png" alt="로그인버튼" />
     //<img src="images/appear/appear_00056.png" alt="로그인버튼" />
