@@ -242,7 +242,7 @@ $(document).ready(function(){
     //마우스를 올렸을 때
     $(".content1").find("a").hover(function(){
         for(var k=0;k<20;k++){
-            $(this).find("span").children().eq(k).css({"animation":"ani 1s linear "+0.05*k+"s 1 normal"});
+            $(this).find("span").children().eq(k).css({"animation":"ani 1s linear "+0.039*k+"s 1 normal"});
         }
     },function(){
         $(this).find("span").children().css({"animation":"none"});

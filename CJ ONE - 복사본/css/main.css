@@ -5,7 +5,7 @@ body{font-size: 14px; font-family: Arial, sans-serif; letter-spacing: -1px;}
 a{text-decoration: none;}
 @font-face{
     font-family:cj_onluone_medium;
-    src:url(../CJ_ONLYONE_Medium.ttf);
+    src:url(../font/CJ_ONLYONE_Medium.ttf);
 }
 .mob,.mobBtn,.mobBtn_close{display: none;}
 
@@ -28,7 +28,7 @@ body>section{position: relative; width: 100%; min-width: 768px;
     .content2_inner{position: relative; width: 768px; height: 100%; margin: 0 auto;
         background: url(../images/bg_hotcontent.png) no-repeat 0 100%;
         background-size: cover; z-index: 3;}
-    .content3{width: 100%; padding: 70px 0 80px;}
+    .content3{width: 100%; padding: 70px 0 80px; transition: all 4000ms linear 0s;}
     .content3_inner{width: 656px; margin: 0 auto;}
 body>footer{width: 100%; height: 238px; background: #222;
     color: #777; text-align: center;}
@@ -116,7 +116,7 @@ p.login>a>img{position: absolute; top: 0; left: 0; opacity: 0;}
 
 /*폼*/
 form.srch{position: fixed; top: 54px; width: 100%; height: 0; overflow: hidden;
-    line-height: 153px; background: #fff; transition: height 400ms linear 0s; z-index: 30;}
+    line-height: 153px; background: #fff; transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */ z-index: 30;}
 form.srch.on{height: 153px;}
 form.srch fieldset{width: 668px; margin: 0 auto;}
 form.srch input[type="search"]{display: inline-block; width: 548px; height: 60px; 
@@ -127,7 +127,7 @@ form.srch input[type="submit"]{width: 120px; height: 60px; background: #333; col
 form.srch input[type="submit"]:hover{background: #000; cursor: pointer;}
 
 /*프로모션 배너*/
-.banner_frame{position: relative; left: 0; width: 800%;}
+.banner_frame{position: relative; left: 0; width: 800%; transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */ }
 .banner_frame>section{float: left; width: 12.5%; height: 550px; background: #eee;}
 .banner_frame>section:first-of-type{background: url(../images/banner1.jpg) no-repeat 50% 0;}
 .banner_frame>section:nth-of-type(2){background: url(../images/banner2.jpg) no-repeat 50% 0;}
@@ -418,7 +418,7 @@ body>section{position: relative; width: 100%; min-width: 984px; height: 550px;
     .content2_inner{position: relative; width: 984px; height: 100%; margin: 0 auto;
         background: url(../images/bg_hotcontent.png) no-repeat 0 100%;
         background-size: cover; z-index: 3;}
-    .content3{width: 100%; padding: 70px 0 80px;}
+    .content3{width: 100%; padding: 70px 0 80px; transition: all 4000ms linear 0s;}
     .content3_inner{width: 984px; margin: 0 auto;}
 body>footer{width: 100%; height: 238px; background: #222;
     color: #777; text-align: center;}
@@ -488,7 +488,7 @@ p.login>a>img{position: absolute; top: 0; left: 0; opacity: 0;}
 
 /*폼*/
 form.srch{position: fixed; top: 120px; width: 100%; height: 0; line-height: 153px; 
-    overflow: hidden; background: #fff; transition: height 400ms linear 0s; z-index: 30;}
+    overflow: hidden; background: #fff; transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */ z-index: 30;}
 form.srch.on{height: 153px;}
 form.srch fieldset{width: 668px; margin: 0 auto;}
 form.srch input[type="search"]{display: inline-block; width: 548px; height: 60px; padding: 0 15px; 
@@ -499,7 +499,7 @@ form.srch input[type="submit"]{width: 120px; height: 60px; background: #333; bor
 form.srch input[type="submit"]:hover{background: #000; cursor: pointer;}
 
 /*프로모션 배너*/
-.banner_frame{position: relative; left: 0; width: 800%;}
+.banner_frame{position: relative; left: 0; width: 800%; transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */ }
 .banner_frame>section{float: left; width: 12.5%; height: 550px; background: #eee;}
 .banner_frame>section:first-of-type{background: url(../images/banner1.jpg) no-repeat 50% 0;}
 .banner_frame>section:nth-of-type(2){background: url(../images/banner2.jpg) no-repeat 50% 0;}
@@ -788,7 +788,7 @@ body>section{position: relative; width: 100%; min-width: 1024px; height: 550px;
         background-size: cover; letter-spacing: 0;}
     .content2_inner{position: relative; width: 1060px; min-width: 1060px; height: 100%;
         margin: 0 auto; z-index: 3;}
-    .content3{width: 100%; padding: 70px 0 80px;}
+    .content3{width: 100%; padding: 70px 0 80px; transition: all 4000ms linear 0s;}
     .content3_inner{width: 1060px; margin: 0 auto;}
 body>footer{width: 100%; height: 238px; background: #222;
     color: #777; text-align: center;}
@@ -830,7 +830,7 @@ nav.gnb>ul>li>ul>li>a{position: relative; color: #fff; transition: color 200ms l
 nav.gnb>ul>li>ul>li>a:hover{color: #f4790b;}
 nav.gnb>ul>li>ul>li>a:after{content: ""; position: absolute; left: 0; bottom: -4px; width: 100%;
     border: 0.5px solid #f4790b; transform: scaleX(0); transform-origin:left; 
-    transition:transform 400ms cubic-bezier(0.770, 0.000, 0.175, 1.000);}
+    transition: all 200ms cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */}
 nav.gnb>ul>li>ul>li>a:hover:after{transform: scaleX(1);}
 
 /*인포*/
@@ -855,7 +855,7 @@ p.login>a>img{position: absolute; top: 0; left: 0; opacity: 0;}
 
 /*폼*/
 form.srch{position: absolute; top: 120px; width: 100%; height: 0; line-height: 153px; 
-    background: #fff; overflow: hidden; transition: height 400ms linear 0s; z-index: 30;}
+    background: #fff; overflow: hidden; transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */ z-index: 30;}
 form.srch.on{height: 153px;}
 form.srch fieldset{width: 668px; margin: 0 auto;}
 form.srch input[type="search"]{display: inline-block; width: 548px; height: 60px; padding: 0 15px;
@@ -865,7 +865,7 @@ form.srch input[type="submit"]{width: 120px; height: 60px; background: #333; col
 form.srch input[type="submit"]:hover{background: #000; cursor: pointer;}
 
 /*프로모션 배너*/
-.banner_frame{position: relative; left: 0; width: 800%;}
+.banner_frame{position: relative; left: 0; width: 800%;   transition: all 500ms cubic-bezier(1.000, 0.000, 0.000, 1.000); /* easeInOutExpo */ }
 .banner_frame>section{float: left; width: 12.5%; height: 550px; background: #eee;}
 .banner_frame>section:first-of-type{background: url(../images/banner1.jpg) no-repeat 50% 0;}
 .banner_frame>section:nth-of-type(2){background: url(../images/banner2.jpg) no-repeat 50% 0;}
